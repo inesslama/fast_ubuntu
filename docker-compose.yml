@@ -1,0 +1,31 @@
+version: "3.8"
+services:
+  postgres-container:
+    image: postgres
+    container_name: postgres-container
+    restart: always
+    ports:
+      - "5432:5432"
+   
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin4_container
+    restart: always
+    ports:
+      - "8888:80"
+    
+    depends_on:
+      - postgres-container
+  fastapi:
+    build:
+      context: .
+    container_name : fastapi-container
+    restart: always
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres-container
+   
+
+
+
