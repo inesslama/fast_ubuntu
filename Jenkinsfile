@@ -1,7 +1,7 @@
 pipeline {
 
   environment {
-    dockerimagename = "docker1299999/crud_app"
+    dockerimagename = "docker1299999/crud_app:1.0"
     dockerImage = ""
   }
 
