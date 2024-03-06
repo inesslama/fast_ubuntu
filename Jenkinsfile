@@ -11,8 +11,7 @@ pipeline {
 
     stage('Checkout Source') {
       steps {
-        git branch: 'main', 
-        git 'https://github.com/inesslama/fast_ubuntu.git'
+        git branch: 'main', url: 'https://github.com/inesslama/fast_ubuntu.git'
       }
     }
 
