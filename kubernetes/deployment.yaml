@@ -19,4 +19,4 @@ spec:
         image: docker1299999/crud_app:1.0
         ports:
         - containerPort: 80
-          
+         
