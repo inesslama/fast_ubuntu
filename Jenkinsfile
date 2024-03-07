@@ -2,7 +2,7 @@ pipeline {
 
   environment {
     dockerimagename = "docker1299999/crud_app:1.0"
-    dockerImage = ""
+    dockerImage = "docker1299999/crud_app:1.0"
   }
 
   agent any
@@ -18,7 +18,7 @@ pipeline {
     stage('Build image') {
       steps{
         script {
-          dockerImage = docker.build dockerimagename
+          dockerImage = docker.build dockerImage
         }
       }
     }
