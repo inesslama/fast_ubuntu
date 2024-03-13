@@ -1,2 +1,2 @@
 steps to follow and reload changing
-git  testing
+git  testing automatic build 
