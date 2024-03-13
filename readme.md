@@ -1,1 +1,2 @@
-steps to follow and reload
+steps to follow and reload changing
+git 
