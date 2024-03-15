@@ -54,7 +54,7 @@ pipeline {
       stage('Deploying application on k8s cluster') {
             steps {
                script{
-                   withCredentials([kubeconfigContent(credentialsId: 'kubernetes-config', variable: 'KUBECONFIG')]) {
+                   withCredentials([file(credentialsId: 'TEST', variable: 'KUBECONFIG')])  {
                        dir('kubechart/') {
  
                         sh 'helm upgrade --install --set image.repository="docker1299999/crud_app " --set image.tag="1.0" myrelease kubechart/ ' 
