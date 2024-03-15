@@ -57,7 +57,7 @@ pipeline {
                    withCredentials([file(credentialsId: 'TEST', variable: 'KUBECONFIG')])  {
                        dir('kubechart/') {
  
-                        sh 'helm upgrade --install --set image.repository="docker1299999/crud_app " --set image.tag="1.0" myrelease kubechart ' 
+                        sh 'helm upgrade --install --set image.repository="docker1299999/crud_app " --set image.tag="1.0" myrelease kubechart/ ' 
                       }
                     }
                }
